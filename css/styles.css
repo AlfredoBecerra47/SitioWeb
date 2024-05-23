@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 #logoFaraday{
 
 
@@ -9,17 +13,38 @@ right: 43%;
 
 }
 
+
 header{
     background-color: white;
     padding: 30px 0;
     position: relative;
 
 }
+
+nav ul{
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    background-color: black;
+       
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 .parrafos{
     background-color: orange;
   /*  border: 2px solid white;*/
     padding: 20px;
     margin:auto;
+
+}
+/*proyectos va en pruebas, la galeria carrousel */
+.prueba{
+    
+    padding: 1000px ;
 
 }
 
