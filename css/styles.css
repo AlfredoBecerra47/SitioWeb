@@ -48,7 +48,11 @@ nav ul li a:hover {
   /*  border: 2px solid white;*/
     padding: 20px;
     margin:auto;
+}
 
+p,h1{
+    text-align: center;
+    color: white;
 }
 /*proyectos va en pruebas, la galeria carrousel */
 .prueba{
@@ -58,15 +62,17 @@ nav ul li a:hover {
 }
 
 
+
 body{
-    text-align: center;
+    align-items: center;
+    justify-content: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 200%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color:black;
-    color: white;
+    
 
 }
 .video-container {
@@ -93,4 +99,53 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 750px;
+    background-color: #000000;
+    padding: 20px;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+}
+
+.form-group input[type="text"],
+.form-group textarea,
+.form-group input[type="tel"],
+.form-group input[type="email"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group input[type="submit"] {
+    padding: 10px;
+    background-color: black;
+
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-group input[type="submit"]:hover {
+    background-color: chocolate;
 }
