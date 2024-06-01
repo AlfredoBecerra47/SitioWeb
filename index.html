@@ -18,10 +18,9 @@
 <nav>
     <ul> 
         <li><a href="pages/contacto.html">Contacto</a></li> 
-       <li><a href="pages/article.html">Nosotros</a></li>  
-       <li><a href="#proyectos">Proyectos</a></li>
-       
-        </ul>
+        <li><a href="pages/article.html">Nosotros</a></li>  
+        <li><a href="#carouselZONA">Proyectos</a></li>   
+    </ul>
 </nav>
 
     <section class="parrafos">   
@@ -34,30 +33,64 @@
 <div class="video-container">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/CIRKrfUmyKU?si=VZ7BqEwXeEnwLPLG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
-        
-   
+          
+<nav>
+    <section class="parrafos">
+<h1>Proyectos</h1>
+    </section>
+</nav>
+<div class="carousel-container">
+    <img id="imagen" src="images/1-50 (2).png" alt="Imagen">
 
-<section id="proyectos">
-    <div class="prueba">   
-    <p>Aca van proyectos</p>
+    <button id="anterior">Anterior</button>
+    <button id="siguiente">Siguiente</button>
+</div>
+<div id="carouselZONA"></div>
 
-   
-
-    
-    </div> 
-
-
-
-
-
-
-
+</div>
 </section>
 
 
- <footer>
+ <footer id="footer">
         <p>&copy; 2024 Faraday - Estudio de Animación</p>
 </footer>
 </main>
 </body>
+<script>
+    let Arrayimages = [
+        "images/1-50 (2).png",
+        "images/1-50 (3).png",
+        "images/1-50 (4).png",
+        "images/1-116.png",
+        "images/1-252.png",
+        "images/1-282.png",
+        
+    
+    ];
+
+    let imagenActual = 0;
+
+    document.getElementById("anterior").addEventListener("click", anterior);
+    document.getElementById("siguiente").addEventListener("click", siguiente);
+
+    function anterior() {
+        imagenActual--;
+        if (imagenActual < 0) {
+            imagenActual = Arrayimages.length - 1;
+        }
+        actualizarImagen();
+    }
+
+    function siguiente() {
+        imagenActual++;
+        if (imagenActual >= Arrayimages.length) {
+            imagenActual = 0;
+        }
+        actualizarImagen();
+    }
+
+    function actualizarImagen() {
+        document.getElementById("imagen").src = Arrayimages[imagenActual];
+    }
+</script>
 </html>

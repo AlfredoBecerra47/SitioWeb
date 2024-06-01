@@ -7,10 +7,8 @@ html {
 
 max-width: 300px;
 height: auto;
-position: absolute;
-top: 5%;
-right: 43%;
-
+display: block; 
+margin: 0 auto; 
 }
 
 
@@ -55,11 +53,6 @@ p,h1{
     color: white;
 }
 /*proyectos va en pruebas, la galeria carrousel */
-.prueba{
-    
-    padding: 1000px ;
-
-}
 
 
 
@@ -89,17 +82,49 @@ body{
     width: 100%;
     height: 100%;
 }
+/*noborrar
+.carousel-container {
+     
+}*/
 
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+#imagen {
+    display: block; 
+    margin: 0 auto; 
+    max-width: 70%; 
+    height: auto; 
+   
 }
+#anterior{
+    display: block;
+    float: left;
+    padding:  20px;
+    font-size: 40px;
+    background-color: black;
+    color: #fff;
+    border:  1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+#siguiente {
+    display: block;
+    float: right;
+    padding:  20px;
+    font-size: 40px;
+    background-color: black;
+    color: #fff;
+    border:  1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#anterior:hover,
+#siguiente:hover {
+    background-color: chocolate; /* Cambia el color de fondo al pasar el cursor */
+}
+
 
 .form-container {
     display: flex;
@@ -148,4 +173,36 @@ footer {
 
 .form-group input[type="submit"]:hover {
     background-color: chocolate;
+}
+
+/*article*/
+.column-container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around; /* Espacia las columnas equitativamente */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.column {
+    background-color: orange;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Las columnas se expanden equitativamente */
+    max-width: 300px; /* Limita el ancho máximo de cada columna */
+    text-align: center;
+}
+
+.column h2 {
+    color: #000000;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.column p {
+    color: #ffffff;
+    font-size: 1em;
+    line-height: 1.6;
 }

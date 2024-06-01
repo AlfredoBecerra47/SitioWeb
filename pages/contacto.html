@@ -19,33 +19,39 @@ No dudes en escribirnos, enviarnos un mensaje de texto o llamarnos por teléfono
 ¡Déjate volver loco!</p>
 </section> 
 
-<form  target="_blank" class="form-container">
+<form onsubmit="return DatosEnviados()"  class="form-container">
     <div class="form-group">
         <label for="nombre"></label>
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+        <input type="text" id="nombre" name="nombre" placeholder="Nombre" >
     </div>
     <div class="form-group">
         <label for="telefono"></label>
-        <input type="tel" id="telefono" name="telefono" placeholder="Telefono" required>
+        <input type="tel" id="telefono" name="telefono" placeholder="Telefono" >
     </div>
     <div class="form-group">
         <label for="email"></label>
-        <input type="email" id="email" name="email"placeholder="Email" required>
+        <input type="email" id="email" name="email"placeholder="Email" >
     </div>
     <div class="form-group">
         <label for="asunto"></label>
-        <textarea id="asunto" name="asunto" rows="4" placeholder="Escribe lo que deseas..." required></textarea>
+        <textarea id="asunto" name="asunto" rows="4" placeholder="Escribe lo que deseas..." ></textarea>
     </div>
     <div class="form-group">
-        <input type="submit" value="Enviar">
+        <input type="submit"   value="Enviar">
+        <div id="error"></div>
+        <div id="exito"></div>
+       
+        
     </div>
 </form>
+
+<script src="../js/script.js">  </script>
 
 </section>
 
 
-<footer>
-       <p>&copy; 2024 Faraday - Estudio de Animación</p>
+<footer id="footer">
+    <p>&copy; 2024 Faraday - Estudio de Animación</p>
 </footer>
 </body>
 </html>
